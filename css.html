@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+        <a href="index.html">돌아가기</a>
+    <head>
+        <title>CSS</title>
+        <meta charset="utf-8" />
+        <!-- external 외부 불러오기 -->
+        <link rel="stylesheet" type="text/css" href="default.css" />
+        <!-- embed 들여오다, 포함되어 있는 -->
+        <style>
+        #id_embed{
+            color:blue;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="id_external">external로 적용</div>
+        <div id="id_embed">embed로 적용</div>
+        <div style="color:green;">inline으로 적용</div>
+        <!-- html주석 -->
+        <style>
+            /* embed */
+            /* 요소(element) 선택자 */
+            b{ color:violet; }
+            /* 클래스(class) 선택자 : 중복가능 */
+            .c_name{ color:gray; }
+            /* 아이디(id) 선택자 : 중복불가 */
+            #i_name{ color:tomato; }
+
+        </style>
+        <b>볼드체</b>
+        <div class="c_name">클래스 선택자</div>
+        <div id="i_name">아이디 선택자</div>
+
+        <style>
+            /* before 이전 */
+            #virtual_element:before{
+                content: "시작";
+            }
+            /* atfer 다음 */
+            #virtual_element:after{
+                content: "끝";
+            }
+            /* first-letter 첫번째 글자*/
+            #virtual_element:first-letter{
+                font-size: 30px;
+            }
+            /* first-line 첫째줄*/
+            #virtual_element:first-line{
+                color:pink;
+            }
+        </style>
+        <div id="virtual_element">가상 요소 선택자
+                가상 요소 선택자가상 요소 선택자가상 요소 선택자
+                가상 요소 선택자가상 요소 선택자가상 요소 선택자
+        </div>
+
+        <style>
+            .class1:first-child{ color:red; }
+            .class1:last-child{ color:green; }
+            .class1:nth-child(3){ color:blue; }
+            /* 1st, 2nd, 3rd, 4th, 5th ...... (n)th n번째 */
+        </style>
+        <div id="virtual_class">
+            <ul>  <!-- parent 부모 -->
+                <li class="class1">리스트1</li> <!-- child 자식 -->
+                <li class="class1">리스트2</li>
+                <li class="class1">리스트3</li>
+                <li class="class1">리스트4</li>
+            </ul>
+        </div>
+
+        <style>
+            /* :link, :visited, :hover, :active, :focus */
+            a:link{ color:red;} /*기본 모양*/
+            a:visited{ color:green;} /*방문한 적 있음*/
+            a:hover{ color:yellow;} /*마우스 올림*/
+            a:active{ color:pink;} /*활성화 - 익스플로러랑 크롬은 포커스로 인식해서 안된다*/
+            a:focus{ color:purple;} /*집중됨, 주목함 - tap 누르다가 포커싱되면 그렇게 된다*/
+        </style>
+        <a href="#">링크 버튼</a>
+
+        <style>
+            /*하위 선택자, 띄어쓰기 */
+            div li{ color: gray;} /* 모든 li 말고 div 하위 li요 */
+            /* 자식 선택자, 부등호(>) 직접적인 관계아니면 중간과정도 써야 적용된다 */
+            div>ul>li{ text-decoration: underline; }
+            /* 선택자 그룹, 쉼표(,) */
+            div,ul,li{ font-weight:bold;}
+        </style>
+        <div>
+            <ul>
+                <li>리스트1</li>
+                <li>리스트1</li>
+                <li>리스트1</li>
+                <li>리스트1</li>
+            </ul>
+        </div>
+
+        <style>
+            .color_sample{
+                color: red;
+                color: #000; /* 3자리 컬러코드, #rgb */
+                color: #000000; /* 6자리 컬러코드 #rrggbb */
+                color: rgb(0,0,255); /* 0 ~ 255 */
+                color: rgb(0%,10%,100%); /* 0% ~ 100% */
+                /* 이렇게 많이 쓴 경우엔 맨 밑꺼가 적용된다 */
+            }
+        </style>
+        <div class="color_sample">색상 입력방법</div>
+
+        <style>
+            #block_target, #inline_target{
+                border: solid 1px black; /*경계선: 실선1px두께 검은선*/
+                width : 200px; /*넓이 : 200px*/ 
+                height: 200px; /*높이 : 200px*/
+                margin: 20px; /*바깥여백: 20px*/
+                padding: 30px; /*안쪽여백: 30px*/
+                /* margin-top 위쪽 여백*/
+                /*top righy bottom left */
+            }
+        </style>
+        <div id="block_target"> block형 태그</div>
+        <sapn id="inline_target"> inline형 태그</sapn>
+
+        <style>
+            #position_target{
+                position: static; /*기본형*/
+                /*위치: 정적인*/
+                /* relative 관계형 */
+                /* absolute 절대적인*/
+                /* fixed 고정된*/
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                /* top, right, bottom,  left, */
+            }
+            </style>
+        <div id="position_target"> position 연습  </div> 
+
+        <style>
+            #font_target{
+                font-family:'HS봄바람체 2.0','돋움',Dotum,sans-serif; 
+                font-size: 30px;
+                font-weight: bold;
+                /* notmal light bold bolder, 100, 200, 300, 400 
+                폰트에서 지원할때만 표현가능*/
+                font-style: italic; /*기울임*/
+                font-variant: small-caps; /*작은 대문자 표기*/ 
+            }
+        </style>
+        font 변경하기
+        <div id="font_target"> 
+            font 변경하기
+            abcDefgHijKlmnoPqrStuVwXYz 
+        </div>
+
+        <style>
+            #align_target{
+                text-align: center;
+                width: 200px;
+                margin-left: auto;
+                margin-right: auto;
+                height: 100px;
+                border:solid 1px black;
+                vertical-align:middle;
+                text-decoration: underline;
+                /*none 없음, underline 밑줄, overline 윗줄, line-through 취소선 */
+            }
+                </style>
+        <div id="align_target"> 글자 정렬 방식 </div>
+        <style>
+                /*
+                    baseline : 기준선에 정렬
+                    top : 위쪽정렬
+                    text-top : 위쪽정렬
+                    middle : 중앙정렬
+                    bottom : 하단정렬
+                    text-bottom : 하단정렬
+                */
+                #table_target td{
+                    width:150px;
+                    height:150px;
+                    border:solid 1px black;
+                }
+                #vartical_baseline{ vertical-align: baseline; }
+                #vartical_top{ vertical-align: top; }
+                #vartical_text_top{ vertical-align: text-top; }
+                #vartical_middle{ vertical-align: middle; }
+                #vertical_bottom{ vertical-align: bottom; }
+                #vertical_text_bottom{ vertical-align: text-bottom; }
+            </style>
+            <table id="table_target">
+                <tr>
+                    <td id="vartical_baseline">top</td>
+                    <td id="vartical_top">top</td>
+                    <td id="vartical_text_top">text_top</td>
+                    <td id="vartical_middle">middle</td>
+                    <td id="vertical_bottom">bottom</td>
+                    <td id="vertical_text_bottom">text_bottom</td>
+                </tr>
+            </table>       
+        
+            <style>
+                #space_target{
+                    letter-spacing: 20px; /*글자 사이의 간격*/
+                    line-height: 30px; /* 줄의 높이*/
+                    text-indent: 50px; /* 들여쓰기 */
+                    text-transform: Capitalize; /*none 일반, uppertacase 대문자로, lowercase 소문자로, capitalize 첫글자 대문자*/
+                    white-space: pre; /*공백 및 줄내림 모두 표현*/
+                }
+            
+            </style>
+
+        <div id="space_target"> 
+한글한글한글한글한글한글한글한글한글한글한글한글한글
+한글한글한글한글한글한글한글한글한글한글한글한글한글
+한글한글한글한글한글한글한글한글한글한글한글한글한글
+한글한글한글한글한글한글한글한글한글한글한글한글한글
+        i was fine with the men 
+        who would come into her life now and again
+        i was fine cause i knew
+        that they didn't really matter until you
+        i was fine when you came
+        and we fought like it was all some silly game
+        over her, who she'd choose
+        after all those years, i never thought i'd lose
+        it's over, isn't it?, isn't it? isn't it over?
+        it's over, isn't it?, isn't it? isn't it over?
+        you won, and she chose you
+        and she loved you and she's gone
+        </div>
+       
+    </body>
+
+
+
+</html>
