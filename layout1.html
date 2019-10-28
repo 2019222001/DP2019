@@ -4,9 +4,12 @@
         <title> 레이아웃1</title>
         <meta charset="utf-8"/>
         <style>
-            header,nav, div, footer, h1,h2,h3,ul,li, img{
+            header,nav,div,footer,h1,h2,h3,ul,li,img {
                 /* border: solid 1px black;
                 margin: 5px; */
+            }
+            header{
+                padding: 20px 70px;
             }
             header>ul>li{
                 float:left; /*왼쪽기준 둥둥 떠다님;*/
@@ -44,6 +47,7 @@
             }
             nav{
                 background-color: #eee;
+                padding: 20px 70px;
             }
             nav>ul{
                 padding: 0px;
@@ -70,9 +74,63 @@
             div>section:nth-child(4) {
                 background-color: #ec5;
             }
+            div>section>div {
+                width: 1000px;
+                margin-left : auto;
+                margin-right : auto;
+            }
             .content_part{
                 width:480px;
+                float: left; /*왼쪽으로 떠다니게함*/ 
+                margin: 5px 10px; /*상하 / 좌우*/
             }
+            section {
+                padding : 50px;
+            }
+            section>div>h3 {
+                color: white;
+            }
+            dt{
+                margin: 10px 0px; /*상하 좌우*/
+                font-weight: bold;
+            }
+            dd{
+                margin: 0px;
+            }
+            footer{
+                background-color:#333;
+                color:#aaa; /*글자색, 크기,폰트종류가 상속됨*/
+                padding: 20px 70px;
+            }
+            #footer_left {
+                float:left;
+            }
+            #navi_ul{
+                padding: 0px;
+            }
+            #navi_ul>li {
+                float: left;
+                list-style: none;
+                padding: 0px 10px;
+                border-right: solid 2px #aaa;
+            }
+            #navi_ul>li:nth-child(6){
+                border:none;
+            }
+            #icon_ul{
+                float: right;
+            }
+            #icon_ul>li {
+                float: left;
+                list-style: none;
+                padding: 0px 10px;
+            }
+            #wrap{
+                min-width: 1000px; /*최소 가로 사이즈*/
+                max-width: 1920px; /*최대 가로 사이즈*/
+                margin: 0px auto; /*상하 0, 좌우 자동*/
+            }
+
 
         </style>
 
@@ -98,7 +156,7 @@
             </header>
             
             <nav>
-                <h2 class="float_left">See Our WORKS</h2>
+                <h2 class="float_left"> See Our WORKS</h2>
                 <ul class="float_right">
                     <li>Web Design</li>
                     <li>Icons</li>
@@ -111,6 +169,7 @@
 
             <div>
                 <section>
+                <div>
                     <h3> Web Design </h3>
                     <div class="content_part"> 
                         <img src="images/layout1_img1.jpg" />
@@ -123,7 +182,7 @@
                             </dd>
                         </dl> 
                     </div>
-                    <div>
+                    <div class="content_part"> 
                         <img src="images/layout1_img2.jpg" />
                         <dl>
                             <dt>
@@ -134,8 +193,11 @@
                             </dd>
                         </dl>  
                     </div>
+                    <div class="clear">
+                </div>
                 </section>
                 <section>
+                    <div>
                         <h3> Icons </h3>
                         <div class="content_part"> 
                             <img src="images/layout1_img3.jpg" />
@@ -148,7 +210,7 @@
                                 </dd>
                             </dl> 
                         </div>
-                        <div>
+                        <div class="content_part">
                             <img src="images/layout1_img4.jpg" />
                             <dl>
                                 <dt>
@@ -159,8 +221,12 @@
                                 </dd>
                             </dl>  
                         </div>
+                        <div class="clear">
+
+                        </div>
                     </section>
                     <section>
+                        <div>
                             <h3> Illustrations </h3>
                             <div class="content_part"> 
                                 <img src="images/layout1_img5.jpg" />
@@ -173,7 +239,7 @@
                                     </dd>
                                 </dl> 
                             </div>
-                            <div>
+                            <div class="content_part">
                                 <img src="images/layout1_img6.jpg" />
                                 <dl>
                                     <dt>
@@ -182,9 +248,14 @@
                                     <dd>
                                         Consectetur adipiscing elit. Suspendisse sed leo tellus. Praesent nec vehicula ligula, non laoreet ligula. Maecenas at massa eget orci porttitor semper.
                                     </dd>
-                                </dl>  </div>
+                                </dl>  
+                            </div>
+                                <div class="clear">
+
+                                </div>
                         </section>
                         <section>
+                                <div>
                                 <h3> Miscellaneous </h3>
                                 <div class="content_part"> 
                                     <img src="images/layout1_img7.jpg" />
@@ -197,7 +268,7 @@
                                         </dd>
                                     </dl> 
                                 </div>
-                                <div>
+                                <div class="content_part">
                                     <img src="images/layout1_img8.jpg" />
                                     <dl>
                                         <dt>
@@ -206,30 +277,42 @@
                                         <dd>
                                             Consectetur adipiscing elit. Suspendisse sed leo tellus. Praesent nec vehicula ligula, non laoreet ligula. Maecenas at massa eget orci porttitor semper.
                                         </dd>
-                                    </dl>  </div>
+                                    </dl>  
+                                </div>
+                                    <div class="clear">
+
+                                    </div>
                             </section>
 
             </div>
 
             <footer> 
-                <ul>
+                <div id="footer_left">
+                <ul id="navi_ul">
                     <li>Home</li>
                     <li>About</li>
                     <li>Servies</li>
                     <li>Work</li>
                     <li>Blog</li>
                     <li>Contact us</li>
+                    <div class="clear"></div>
                 </ul>
-                <p>ⓒ 2013 BlueBox. All Right Reserved. </p>
-                <p>the loges in the design are the property of their respective owners/copyright holders.</p>
-            
-                <ul>
+                <p>
+                    ⓒ 2013 BlueBox. All Right Reserved.
+                </p>
+                <p>
+                    the loges in the design are the property of their respective owners/copyright holders.
+                </p>
+                </div>
+                <ul id="icon_ul">
                     <li><img src="images/layout1_footer_icon1.png"> </li>
                     <li><img src="images/layout1_footer_icon2.png"> </li>
                     <li><img src="images/layout1_footer_icon3.png"> </li>
                     <li><img src="images/layout1_footer_icon4.png"> </li>
                     <li><img src="images/layout1_footer_icon5.png"> </li>
+                    <div class="clear"></div>
                 </ul>
+                <div class="clear"></div>
             </footer>
         </div>
     </body>
