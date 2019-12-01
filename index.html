@@ -1,24 +1,242 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
     <head>
-        <title>HTML Design</title>
-        <meta charset="utf-8" />
-        <!-- UTF-8, euc-kr -->
-        <meta name="author" content="옹헷스" />
+        <title> INDEX </title>
+        <meta charset = "utf-8"/>
+        <style>
+            
+            header{
+                background-color: #00213a;
+                color: white;
+                padding: 10px 50px;
+                font-family : "HancomEQN";
+                font-size: 10px; 
+            }
+            header> h1> span:nth-child(2){
+                color: #88c7cf;
+            }
+            header >nav > ul> li{
+                float:left;
+                list-style:none;
+                padding: 0px 10px;
+
+            }
+            header>nav>ul{
+                margin:12px 0px;
+                font-size:13px;
+                }
+            header>h1{
+                margin: 0px;
+            }
+            body{
+                margin: 0px;
+            }
+            #wrap{
+                min-width: 1000px;
+                max-width: 1920px;
+                margin-right: auto;
+                margin-left: auto;
+
+            }
+            .clear{
+                clear: both;
+                height: 0px; 
+                overflow: hidden;
+            }
+            .float_left{
+                float : left;
+            }
+            .float_right{
+                float : right; 
+            }
+            #main_visual{
+                height:400px;
+                background-image: url("images/flower.jpg");
+                background-size: 100% auto; /*가로 / 세로 */
+                background-size: cover; /*표지*/
+                background-repeat: no-repeat; 
+                /*반복방식 : repeat, no-repeat(안반복), repeat-x(가로복제), repeat-y (세로복제)*/
+                background-color: black;
+                background-position: 50% 50%; 
+
+                color:#072744;
+                stroke: black;
+                text-align: center;
+                padding: 100px 0px; 
+                font-family: "DX별과그대";
+                text-align: middle;
+
+            }
+
+            #main_visual>h2{
+                font-size: 25px;
+                letter-spacing: 15px;
+                margin: 8px 0px;
+            }
+
+            #top_title{
+                font-size: 5px;
+            }
+            #bottom_title{
+                font-size: 15px;
+            }
+            #button_container{
+                margin-top: 100px;
+            }
+            section{
+                text-align: center;
+                font-family: serif;
+                font-size:15px;
+            }       
+            section>h3{
+                color:#02918c;
+                margin: 30px 0px; /*상하 좌우*/
+            }
+            section>p{
+                margin: 30px 0px;
+                padding : 0px 100px; 
+
+            }
+            section #about_list>li{
+                float: left;
+                list-style: none;
+                width: 25%;
+                width: calc(25% - (1px / 4 * 3) - 25px - 25px );
+                
+                border-right : solid 1px #ccc; 
+                padding: 25px;
+
+            }
+            section>#about_list>li:nth-child(4){
+                border:none;
+
+            }
+            section #about_list{
+                padding: 0px 50px;
+            }
+            section dd{
+                margin: 0px;
+            }
+            section #work_list{
+                padding: 0px;
+                margin: 0px;
+            }
+            section #work_list>li{
+                float: left;
+                list-style: none;
+                width: 25%;
+            }
+            section>#work_list img{
+                width: 100%; /*내가 쓸 수 있는 공간*/
+                display: inline; /* 기본 방식 = 인라인 */
+                display: block; /* 출력방식 : 블록 */
+            }
+
+            #top_title{
+                font-size : 30px;
+                font-family: "HancomEQN","Zhi Mang Xing","DX별과그대";
+            }
+            #bottom_title{
+                font-family : "Adobe 명조 Std";
+                font-size : 20px;
+            }
+
+            #middle_title{
+                font-family : "HancomEQN","DX별과그대";
+                font-size: 20px;
+        
+            }
+            #story_line {
+                width : 1000px;
+                text-align: center;
+                margin : auto;
+                margin-bottom : 50px;
+                font-size:15px;
+
+            }
+            notice>p{
+                font-size:15px;
+            }
+            
+
+        </style>
     </head>
     <body>
-        <a href="training_hd.html"> 1주차. HTML연습 </a> <br>
-        <a href="html_part1_hd.html"> 2주차. 자유주제 </a> <br>
-        <a href="html5.html"> HTML5.HTML</a> <br>
-        <a href="form.html"> FORM.HTML </a> <br>
-        <a href="css.html"> CSS.HTML</a> <br>
-        <a href="css_part1.html"> css_part1.HTML</a> <br>
-        <a href="layout1.html"> layout1.HTML</a> <br>
-        <a href="layout2.html"> layout2.HTML</a> <br>
-        <a href="layout3.html"> layout3.HTML<a> <br>
-        <a href="freelayout.html"> freelayout.HTML </a>
-    </body>
-</html>
-<a>
+        <div id="wrap">
+            <header>
+                <h1 class="float_left">
+                    <span>HTML </span><span>2019222001김영혜</span>
+                    <!-- div, span만 사용한다: 별 의미를 가지고 있지 않은
+                    구획 나누기라서-->
+                </h1>
+                <nav class="float_right">
+                    <ul>
+                        <li> <a href="layout1.html"> LAYOUT1 </a></li>
+                        <li> <a href="layout2.html"> LAYOUT2 </a> </li>
+                        <li> <a href="layout3.html"> LAYOUT3 </a> </li>
+                        <li> <a href="freelayout.html"> FREE LAYOUT </a> </li>
+                        <div class="clear"></div>
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+            </header>
+            <div id="main_visual">
+                    <div id="top_title">
+                     
+                    </div>
+                    <div id="middle_title">
+                    <h2> HTML </h2> <br>
+                    2019222001
+            </div>
 
-</a>
+
+                <!-- <div id="button_container">
+                    <img src="images/layout2_button2.png"/> 
+                </div> 
+                -->
+            </div>
+            <section>
+                <ul id="about_list">
+                    <li>
+                        <img src="images/dice1.png">
+                        <dl>
+                            <dt> <a href="layout1.html"> LAYOUT1 </a>  </dt>
+
+                        </dl>
+                    </li>
+
+                    <li>
+                            <img src="images/dice2.png">
+                            <dl>
+                                <dt> <a href="layout2.html"> LAYOUT2 </a> </vr></dt>
+
+                            </dl>
+                        </li>
+
+                    <li>
+                        <img src="images/dice3.png">
+                            <dl>
+                                <dt> <a href="layout3.html"> LAYOUT3 </a> </dt>
+
+                            </dl>
+                    </li>
+
+                    <li>
+                        <img src="images/dice4.png">
+                            <dl>
+                                <dt> <a href="freelayout.html"> FREE LAYOUT </a> </dt>
+                            </dl>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+            </section>
+
+            
+
+
+        </div>
+    </body>
+
+    <br>
+    <a href="index.html"> INDEX </a>
+</html>
