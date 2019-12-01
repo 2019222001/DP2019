@@ -13,7 +13,7 @@
                 font-family : "HancomEQN"
             }
             header> h1> span:nth-child(2){
-                color: #cfc91d;
+                color: #88c7cf;
             }
             header >nav > ul> li{
                 float:left;
@@ -62,6 +62,7 @@
                 stroke: black;
                 text-align: center;
                 padding: 100px 0px; 
+                font-family: "DX별과그대";
 
             }
 
@@ -83,7 +84,8 @@
             section{
                 text-align: center;
                 font-family: serif;
-            }
+                font-size:15px;
+            }       
             section>h3{
                 color:#02918c;
                 margin: 30px 0px; /*상하 좌우*/
@@ -130,7 +132,7 @@
 
             #top_title{
                 font-size : 130px;
-                font-family: "HancomEQN","Zhi Mang Xing";
+                font-family: "HancomEQN","Zhi Mang Xing","DX별과그대";
             }
             #bottom_title{
                 font-family : "Adobe 명조 Std";
@@ -138,18 +140,31 @@
             }
 
             #middle_title{
-                font-family : "HancomEQN";
+                font-family : "HancomEQN","DX별과그대";
                 font-size: 35px;
             }
             #story_line {
                 width : 1000px;
                 text-align: center;
+                margin : auto;
+                margin-bottom : 50px;
+                font-size:15px;
+
+            }
+            notice>p{
+                font-size:15px;
             }
             
 
         </style>
     </head>
     <body>
+            <iframe src="./osr.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+            <audio id="audio"autoplay>
+                <source src="./media/osr.mp3">
+            </audio>
+
+
         <div id="wrap">
             <header>
                 <h1 class="float_left">
@@ -241,9 +256,10 @@
                 <p id= "story_line">
                         16년 전, 5대 세가인 고소남씨(姑苏蓝氏), 운몽강씨(云梦江氏), 청하섭씨(清河聂氏), 기산온씨(岐山温氏), 난릉금씨(兰陵金氏)가 나누어 통치하던 천하. 
                         주인공 위무선은 운몽강씨 가문의 하인과 명망 높은 여도사의 아들로서, 어려서 부모를 잃고 운몽강씨 가문의 가주 강풍면에게 거두어져 강풍면의 자식인 강징, 강염리와 친형제, 친남매처럼 자랐다.<br> 
-                        성장한 후 강징, 강염리와 함께 고소남씨의 운심부지처로 유학을 간 그는 활달하고 오지랖 넓은 성격, 타고난 재능과 뛰어난 실력, 그리고 놀라운 뻔뻔함으로 운심부지처를 휘젓고 다녔고, 
+                        성장한 후 강징, 강염리와 함께 고소남씨의 운심부지처로 유학을 간 그는 활달하고 오지랖 넓은 성격, 타고난 재능과 뛰어난 실력, 그리고 놀라운 뻔뻔함으로 운심부지처를 휘젓고 다니며
                         고지식하고 엄격한 고소남씨 가문의 둘째 아들 남망기와 수없이 부딪히며 벌어지는 이야기
                     </p>
+                    <div class="clear"></div>
           
                     
                 <ul id="work_list">
@@ -261,6 +277,7 @@
             <div class="clear"></div>
             </section>
             
+
 
         </div>
     </body>
