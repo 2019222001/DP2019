@@ -1,0 +1,165 @@
+<!-- html css javascript-->
+
+<button onclick="alert('클릭됨')">클릭 </button>
+<!-- 클릭이 일어나면 경고창에 클릭됨이라고 표시함-->
+<button onmouseover="alert('마우스 올림')">마우스 올림</button>
+
+<style> /*css작성공간*/ </style>
+<script>
+//자바 스크립트 작성하는 곳
+function f1() //함수의 선언
+    alert('안녕하세요');
+    alert('반갑습니다');
+
+f1(); //함수의 호출
+</script>
+<button onclick="f1()">인사</button>
+
+<script>
+    function f2(a,b) { //a,b인자값이 있는 함수의 선언/ 
+        //alert("합계" + (a+b));
+
+    }
+    f2(2,3); //함수의 호출
+    </script>
+    <button onclick="f2(2,3)">2+3</button>
+    <button onclick="f2(4,5)">4+5</button>
+
+    <script>
+        function f3 (a,b){
+            //인자값이 있고, 리턴값이 있는 함수의 선언
+            return (a+b)+"입니다";
+        }
+        var str = f3(2,3); // 함수를 호출하고 리턴값을 받는다.
+        //alert(str);        
+        </script>
+
+<script>
+    function f(a){
+        for(var i=0; i<a; i++){
+            //i는 0,i는a보다 작다; i는 점점커짐.
+            //반복문 
+            alert(i);
+        }
+    }
+    f4(5); 
+</script>
+
+<button onclick="make_box()">박스 만들기</button>
+
+<div id="name_div">
+    내 이름은
+    <span id="name_span">홍길동</span>
+    입니다.
+</div>
+
+<script>
+    var target_span = document.getElementById('name_span');
+    //변수 타겟_스팬은 문서에서 아이디가 네임스팬 요소를 칭한다;
+    //대상 찾기
+    target_span.innerHTML = "철수"; 
+    // 대상. 내부 html을 철수로 바꾼다.; 
+
+    function name_change(str){
+        target_span.innerHTML = str;
+    }
+    name_change('영수'); //호출 
+</script>
+<button onclick="name_change('영희')"> 영희 </button>
+<button onclick="name_change('영미')"> 영미 </button>
+
+<style>
+    #red_div{
+        transition: color 0.5s; /*글자 색을 0.5초간 바꿈 */
+        transition: font-size 0.5s;
+    }
+.red_text{
+    color: red;
+}
+    </style>
+<div id="red_div" calss="red_text"> 붉은 글씨</div>
+<script>
+var target_div = document.getElementById('red_div');
+target_div.classList.add("red_text");
+function toggle_div(){
+    target_div.classList.toggle("red_text");
+}
+</script>
+<button onclick="toggle_div()">빨간 글씨 토글</button>
+
+<style>
+        #b_red{
+            background-color: red;
+        }
+        #b_blue{
+            background-color: blue;
+        }
+        #b_yellow{
+            background-color: yellow;
+        }
+        #b_green{
+            background-color: green;
+        }
+        [id*="b_"]{
+            width: 25%;
+            height: 200px;
+            float: left;
+        }
+        #container{
+            width: 400%;
+            position: absolute;
+            transition: left 0.5s;
+        }
+        .m_0{ left: 0% }
+        .m_1{ left: -100% }
+        .m_2{ left: -200% }
+        .m_3{ left: -300% }
+        #frame{
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .clear{
+            clear: both;
+            height: 0px;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        var save_idx = 0;
+        function change_con(idx){
+            save_idx = idx;
+            var target = document.getElementById("container");
+            target.classList = ""
+            target.classList.add("m_"+idx);
+        }
+    </script>
+    <div id="frame">
+        <div id="container" class="m_0">
+            <div id="b_red">content1</div>
+            <div id="b_blue">content2</div>
+            <div id="b_yellow">content3</div>
+            <div id="b_green">content4</div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <button onclick="change_con(0)">content1</button>
+    <button onclick="change_con(1)">content2</button>
+    <button onclick="change_con(2)">content3</button>
+    <button onclick="change_con(3)">content4</button>
+    <script>
+        function left_con(){
+            if(save_idx > 0){
+                save_idx --;
+                change_con(save_idx);
+            }
+        }
+        function right_con(){
+            if(save_idx < 3){
+                save_idx ++;
+                change_con(save_idx);
+            }
+        }
+    </script>
+    <button onclick="left_con()">go left</button>
+    <button onclick="right_con()">go right</button>
